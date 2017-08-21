@@ -2,11 +2,28 @@ using System;
 
 namespace interface_generics_inheritance
 {
-    class TankDriver
+    class TankDriver : Soldier,ITankDriver
     {
-        public string Speak()
+
+        public TankDriver(string name, int serialNumber, string rank) : base(new Tank(), name, serialNumber, rank)
         {
-            return "Hooah";
+            Name = name;
+            SerialNumber = serialNumber;
+            Rank = rank;
+        }
+        public override void Speak()
+        {
+             Console.WriteLine("Rolling out!");
+        }
+
+        public int NumberOfCarsCrushed()
+        {
+            return 50;
+        }
+
+        public string TankName()
+        {
+            return "Louise";
         }
     }
 
