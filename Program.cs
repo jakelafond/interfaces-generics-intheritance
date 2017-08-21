@@ -12,7 +12,10 @@ namespace interface_generics_inheritance
             goose.Speak();
             goose.Attack();
 
-            
+            var ltMorales = new Healer("Lt. Morales", 1337, "Lieutenant");
+            Console.WriteLine($"I am {ltMorales.Name}, serial number {ltMorales.SerialNumber}, I am {ltMorales.Rank}. I have {ltMorales.NumberOfMedkits()} medkits and my favorite injury to treat is a {ltMorales.FavoriteInjury()}.");
+            ltMorales.Speak();
+            ltMorales.Attack();
         }
     }
 }
